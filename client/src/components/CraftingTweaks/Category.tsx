@@ -1,10 +1,10 @@
 import { Icon } from '@iconify/react'
 import React, { useState } from 'react'
-import { ICategories } from '.'
+import { ICraftingTweaks } from '.'
 import PackItem from './Pack'
 
 function Category({ category, index }: {
-  category: ICategories,
+  category: ICraftingTweaks,
   index: number
 }) {
   const [isOpen, setOpen] = useState(index === 0);

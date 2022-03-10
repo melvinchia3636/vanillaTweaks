@@ -4,6 +4,7 @@ import Home from './components/Home';
 import Navbar from './components/Navbar';
 import ResourcePack from './components/ResourcePacks';
 import Datapacks from './components/Datapacks';
+import CraftingTweaks from './components/CraftingTweaks';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/resource-packs" element={<ResourcePack />} />
           <Route path="/datapacks" element={<Datapacks />} />
+          <Route path="/crafting-tweaks" element={<CraftingTweaks />} />
         </Routes>
       </Router>
     </div>

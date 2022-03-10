@@ -1,10 +1,10 @@
 import { Icon } from '@iconify/react'
 import React, { useState } from 'react'
-import { ICategories } from '.'
+import { IResourcePacks } from '.'
 import PackItem from './Pack'
 
 function Category({ category, index }: {
-  category: ICategories,
+  category: IResourcePacks,
   index: number
 }) {
   const [isOpen, setOpen] = useState(index === 0);
@@ -15,7 +15,7 @@ function Category({ category, index }: {
         <Icon icon="uil:angle-right" className={`text-[#E99743] w-6 h-6 transition-all ${isOpen ? "rotate-90" : ""}`} />
         <span className="mt-0.5">{category.category}</span>
       </button>
-      <div className={`grid min-w-0 gap-4 px-8 grid-cols-[repeat(auto-fill,minmax(140px,1fr))] transition-all overflow-hidden duration-700 ${isOpen ? "max-h-[150rem] py-4" : "max-h-0 py-0"}`}>
+      <div className={`grid min-w-0 gap-4 px-8 grid-cols-[repeat(auto-fill,minmax(140px,1fr))] transition-all overflow-hidden duration-700 ${isOpen ? "max-h-[180rem] py-4" : "max-h-0 py-0"}`}>
         {category.packs.map((pack) => (
           <PackItem pack={pack} category={category.category} />
         ))}
