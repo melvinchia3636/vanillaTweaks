@@ -52,9 +52,9 @@ function Datapacks() {
 		<Context.Provider value={{
 			selected, setSelected, hover, setHover,
 		}}>
-			<div className="flex h-full gap-8">
+			<div className="flex min-h-full gap-4 items-stretch">
 				<div className="flex-1 h-full mr-0 pb-16 flex flex-col">
-					<div className="min-w-0 m-8 mb-12 mr-0 overflow-scroll bg-[#696969] rounded-lg shadow-lg p-8">
+					<div className="min-w-0 h-full m-8 mb-12 mr-0 overflow-scroll bg-[#696969] rounded-lg shadow-lg p-8">
 						<div className="flex items-center justify-between">
 							<h1 className="text-2xl text-white tracking-widest">Datapacks</h1>
 						</div>

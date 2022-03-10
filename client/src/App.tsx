@@ -13,6 +13,8 @@ function App() {
 				<Navbar />
 				<Routes>
 					<Route path="/" element={<Home />} />
+					<Route path="/about" element={<div>About</div>} />
+
 					<Route path="/resource-packs" element={<ResourcePack />} />
 					<Route path="/datapacks" element={<Datapacks />} />
 					<Route path="/crafting-tweaks" element={<CraftingTweaks />} />
