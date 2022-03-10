@@ -1,4 +1,5 @@
 import React, {createContext, useEffect, useState} from 'react';
+import Loading from '../../misc/Loading';
 import MiscButtons from '../../misc/MiscButtons';
 import Selector from '../../misc/Selector';
 import Category from './Category';
@@ -43,9 +44,9 @@ function Datapacks() {
 	const [hover, setHover] = useState<Datapack | null>(null);
 
 	useEffect(() => {
-		fetch('https://cors-anywhere.thecodeblog.net/vanillatweaks.net/assets/resources/json/1.18/dpcategories.json')
-			.then(response => response.json())
-			.then(data => setData(data.categories));
+		// fetch('https://cors-anywhere.thecodeblog.net/vanillatweaks.net/assets/resources/json/1.18/dpcategories.json')
+		// 	.then(response => response.json())
+		// 	.then(data => setData(data.categories));
 	}, []);
 
 	return (
@@ -59,9 +60,11 @@ function Datapacks() {
 							<h1 className="text-2xl text-white tracking-widest">Datapacks</h1>
 						</div>
 						<div className="min-w-0 overflow-auto flex flex-col gap-2 mt-8">
-							{data.length > 0 && data.map((category, index) => (
+							{data.length > 0 ? data.map((category, index) => (
 								<Category key={category.category} category={category} index={index} />
-							))}
+							)) : <div>
+								<Loading />
+							</div>}
 						</div>
 					</div>
 				</div>

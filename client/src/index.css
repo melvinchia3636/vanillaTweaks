@@ -5,4 +5,93 @@
 * {
   font-family: 'Proxima Nova', sans-serif;
   box-sizing: border-box;
+  @apply scroll-m-8 scroll-smooth
+}
+
+.installation img {
+  border-radius: 8px;
+}
+
+.installation ol {
+  @apply list-decimal list-inside;
+}
+
+.installation :is(li, p) {
+  @apply mt-8 mb-4;
+}
+
+.cube {
+  margin: auto;
+  font-size: 24px;
+  height: 1em;
+  width: 1em;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: cube-spin 1.5s infinite ease-in-out alternate both;
+}
+
+.side {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform-style: preserve-3d;
+}
+
+.side::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  transform: translatez(0.5em);
+  animation: cube-explode 1.5s infinite ease-in-out;
+  opacity: 0.5;
+}
+
+.side:nth-child(1) {
+  transform: rotatey(90deg);
+}
+
+.side:nth-child(2) {
+  transform: rotatey(180deg);
+}
+
+.side:nth-child(3) {
+  transform: rotatey(270deg);
+}
+
+.side:nth-child(4) {
+  transform: rotatey(360deg);
+}
+
+.side:nth-child(5) {
+  transform: rotatex(90deg);
+}
+
+.side:nth-child(6) {
+  transform: rotatex(270deg);
+}
+
+@keyframes cube-spin {
+  0% {
+    transform: rotatex(35.264deg) rotatey(45deg);
+  }
+  100% {
+    transform: rotatex(35.264deg) rotatey(405deg);
+  }
+}
+@keyframes cube-explode {
+  0% {
+    transform: translatez(0.5em);
+  }
+  50% {
+    transform: translatez(0.75em);
+  }
+  100% {
+    transform: translatez(0.5em);
+  }
 }

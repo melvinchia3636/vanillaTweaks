@@ -22,7 +22,7 @@ function PackItem({pack, category}: { pack: Datapack, category: string }) {
 			}}
 			className={`${Object.values(selected).filter(e => e.filter(e => e.name === pack.name).length).length ? 'bg-[#777777]' : 'bg-[#525252] hover:bg-[#606060]'} rounded-md relative shadow-md py-8 px-4 gap-1 flex flex-col justify-start items-center transition-all`}
 		>
-			<div className={`px-4 bg-neutral-800 w-full text-sm z-[9999] rounded-md break-words text-white absolute bottom-0 overflow-auto left-1/2 -translate-x-1/2 transition-all duration-500 ${itemHover ? 'max-h-full py-4' : 'max-h-0'}`} dangerouslySetInnerHTML={{__html: (pack.video && `<a href=${pack.video} class="block text-center w-full underline mb-2 text-[#E99743]" target="_blank" rel="noreferrer">View video</a>`) + pack.description}}></div>
+			<div className={`px-4 bg-neutral-800 w-full text-sm z-[9999] rounded-md break-words text-white absolute bottom-0 overflow-auto left-1/2 -translate-x-1/2 transition-all duration-500 ${itemHover ? 'max-h-[75%] py-4' : 'max-h-0'}`} dangerouslySetInnerHTML={{__html: (pack.video && `<a href=${pack.video} class="block text-center w-full underline mb-2 text-[#E99743]" target="_blank" rel="noreferrer">View video</a>`) + pack.description}}></div>
 			<img src={`https://vanillatweaks.net/assets/resources/icons/datapacks/1.18/${pack.name}.png`} alt={pack.name} className="w-20 h-20" />
 			<div className="text-white text-center pt-4 flex-1 mb-4">{pack.display}</div>
 			<span className="text-white text-xs absolute bottom-0 left-1/2 -translate-x-1/2 mb-2">v{pack.version}</span>

@@ -1,3 +1,4 @@
+/* eslint-disable no-negated-condition */
 import React from 'react';
 import {Icon} from '@iconify/react';
 import download from '../functions/download';
@@ -19,7 +20,7 @@ function Selector({selected, name, display}: {
 				<span className="block truncate">{display} Selector</span>
 			</div>
 			<div className="flex-1 p-4 overflow-auto h-max flex flex-col gap-4">
-				{Object.entries(selected).map(([category, packs]) => (
+				{JSON.stringify(selected) !== '{}' ? Object.entries(selected).map(([category, packs]) => (
 					<div key={category} className="flex flex-col gap-2">
 						<h2 className="text-xl text-white flex items-center gap-2">
 							<Icon icon="uil:direction" className="w-6 h-6 flex-shrink-0" />
@@ -35,7 +36,9 @@ function Selector({selected, name, display}: {
 							))}
 						</div>
 					</div>
-				))}
+				)) : <div className="w-full h-full flex items-center justify-center text-neutral-400">
+					Select a {display}!
+				</div>}
 			</div>
 			<button onClick={() => download(selected, name)} className="bg-[#E99743] text-white w-full py-3">Download</button>
 		</div>
