@@ -5,6 +5,7 @@ import download from '../functions/download';
 import {Datapack} from '../pages/Datapacks';
 import {Resourcepack} from '../pages/ResourcePacks';
 import {CraftingTweak} from '../pages/CraftingTweaks';
+import isIncompatible from '../functions/isIncompatible';
 
 function Selector({selected, name, display}: {
   selected: {[key: string]: (Datapack | Resourcepack | CraftingTweak)[]}
@@ -28,7 +29,7 @@ function Selector({selected, name, display}: {
 						</h2>
 						<div className="flex flex-col gap-2">
 							{packs.map(pack => (
-								<div key={pack.name} className="flex items-center gap-2 ml-6 text-white">
+								<div key={pack.name} className={`flex items-center gap-2 ml-6 text-white ${isIncompatible(selected, pack) ? 'text-red-500' : 'text-white'}`}>
 									<Icon icon="uil:direction" className="w-6 h-6 flex-shrink-0" />
 									<img src={`https://vanillatweaks.net/assets/resources/icons/${name}/1.18/${pack.name}.png`} alt={pack.name} className="w-4 h-4" />
 									<span className="block truncate">{pack.display}</span>
