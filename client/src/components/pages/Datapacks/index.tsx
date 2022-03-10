@@ -44,9 +44,9 @@ function Datapacks() {
 	const [hover, setHover] = useState<Datapack | null>(null);
 
 	useEffect(() => {
-		// fetch('https://cors-anywhere.thecodeblog.net/vanillatweaks.net/assets/resources/json/1.18/dpcategories.json')
-		// 	.then(response => response.json())
-		// 	.then(data => setData(data.categories));
+		fetch('https://cors-anywhere.thecodeblog.net/vanillatweaks.net/assets/resources/json/1.18/dpcategories.json')
+			.then(response => response.json())
+			.then(data => setData(data.categories));
 	}, []);
 
 	return (
@@ -55,14 +55,14 @@ function Datapacks() {
 		}}>
 			<div className="flex min-h-full gap-4 items-stretch">
 				<div className="flex-1 h-full mr-0 pb-16 flex flex-col">
-					<div className="min-w-0 h-full m-8 mb-12 mr-0 overflow-scroll bg-[#696969] rounded-lg shadow-lg p-8">
+					<div className={`min-w-0 h-full m-8 mb-12 mr-0 flex-col overflow-scroll bg-[#696969] rounded-lg shadow-lg p-8 ${data.length === 0 && 'flex'}`}>
 						<div className="flex items-center justify-between">
 							<h1 className="text-2xl text-white tracking-widest">Datapacks</h1>
 						</div>
-						<div className="min-w-0 overflow-auto flex flex-col gap-2 mt-8">
+						<div className="min-w-0 flex-1 overflow-auto flex flex-col gap-2 mt-8">
 							{data.length > 0 ? data.map((category, index) => (
 								<Category key={category.category} category={category} index={index} />
-							)) : <div>
+							)) : <div className="w-full h-full -mt-8 flex items-center justify-center">
 								<Loading />
 							</div>}
 						</div>

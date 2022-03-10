@@ -1,5 +1,6 @@
 import {Icon} from '@iconify/react';
 import React, {createContext, useEffect, useState} from 'react';
+import Loading from '../../misc/Loading';
 import MiscButtons from '../../misc/MiscButtons';
 import Selector from '../../misc/Selector';
 import Category from './Category';
@@ -20,20 +21,22 @@ export interface ICraftingTweaks {
 }
 
 export const Context = createContext<{
-	selected: {[key: string]: CraftingTweak[]},
-	setSelected:(_selected: {[key: string]: CraftingTweak[]}) => void,
+	selected: { [key: string]: CraftingTweak[] },
+	setSelected:(_selected: { [key: string]: CraftingTweak[] }) => void,
 	hover: CraftingTweak | null,
-	setHover: (_hover: CraftingTweak|null) => void,
-		}>({
+	setHover: (_hover: CraftingTweak | null) => void,
+		}>(
+		{
 			selected: {},
-			setSelected() {},
+			setSelected() { },
 			hover: null,
-			setHover() {},
-		});
+			setHover() { },
+		},
+		);
 
 function CraftingTweaks() {
 	const [data, setData] = useState<ICraftingTweaks[]>([]);
-	const [selected, setSelected] = useState<{[key: string]: CraftingTweak[]}>({});
+	const [selected, setSelected] = useState<{ [key: string]: CraftingTweak[] }>({});
 	const [hover, setHover] = useState<CraftingTweak | null>(null);
 
 	useEffect(() => {
@@ -48,14 +51,16 @@ function CraftingTweaks() {
 		}}>
 			<div className="flex min-h-full gap-4 items-stretch">
 				<div className="flex-1 h-full mr-0 pb-16 flex flex-col">
-					<div className="min-w-0 h-full m-8 mb-12 mr-0 overflow-scroll bg-[#696969] rounded-lg shadow-lg p-8">
+					<div className={`min-w-0 h-full flex-col m-8 mb-12 mr-0 overflow-scroll bg-[#696969] rounded-lg shadow-lg p-8 ${data.length === 0 && 'flex'}`}>
 						<div className="flex items-center justify-between">
 							<h1 className="text-2xl text-white tracking-widest">Crafting Tweaks</h1>
 						</div>
-						<div className="min-w-0 overflow-auto flex flex-col gap-2 mt-8">
-							{data.length > 0 && data.map((category, index) => (
+						<div className="min-w-0 flex-1 overflow-auto flex flex-col gap-2 mt-8">
+							{data.length > 0 ? data.map((category, index) => (
 								<Category key={category.category} category={category} index={index} />
-							))}
+							)) : <div className="w-full h-full -mt-8 flex items-center justify-center">
+								<Loading />
+							</div>}
 						</div>
 					</div>
 				</div>
