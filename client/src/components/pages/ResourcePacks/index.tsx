@@ -66,7 +66,7 @@ function ResourcePack() {
             </div>
             <div className="min-w-0 flex-1 overflow-auto flex flex-col gap-2 mt-8">
               {data.length > 0 ? data.map((category, index) => (
-                <Category category={category} index={index} />
+                <Category key={index} category={category} index={index} />
               )) : <div className="w-full h-full -mt-8 flex items-center justify-center">
                 <Loading />
               </div>}

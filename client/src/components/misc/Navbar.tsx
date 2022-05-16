@@ -30,7 +30,7 @@ function Navbar() {
 			</Link>
 			<div className="flex items-center gap-12 text-white mr-4 tracking-widest">
 				{navItems.map(({name, link}) => (
-					<Link key={name} to={link} className={`relative ${link === location.pathname ? 'after:content-[\'\'] after:absolute after:w-1/2 after:border-b-[1.6px] after:border-b-[#E99743] after:-bottom-0.5 after:left-1/2 after:-translate-x-1/2 after:rounded-full' : ''}`}>{name}</Link>
+					<Link key={name} to={link} className={`relative ${link === location.pathname ? 'after:content-[\'\'] after:absolute after:w-1/2 after:border-b-2 after:border-b-[#E99743] after:-bottom-0.5 after:left-1/2 after:-translate-x-1/2 after:rounded-full' : ''}`}>{name}</Link>
 				))}
 			</div>
 		</nav>

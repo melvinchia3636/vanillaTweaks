@@ -4,19 +4,21 @@ import {Context, IResourcePacks} from '.';
 import PackItem from './Pack';
 
 function Category({category, index}: {
-  category: IResourcePacks,
-  index: number
+	category: IResourcePacks,
+	index: number
 }) {
 	const [isOpen, setOpen] = useState(index === 0);
 	const {selected, setSelected} = useContext(Context);
+	console.log(isOpen);
 
 	return (
 		<>
 			<button onClick={e => {
-				if ((e.target as HTMLButtonElement)?.classList.contains('cath')) {
+				console.log((e.target as HTMLButtonElement)?.classList);
+				if (!(e.target as HTMLButtonElement)?.classList.contains('cath')) {
 					setOpen(!isOpen);
 				}
-			}} className="text-lg cath text-white tracking-widest bg-[#525252] rounded-md shadow-md px-4 py-2 flex items-center justify-between">
+			}} className="text-lg text-white tracking-widest bg-[#525252] rounded-md shadow-md px-4 py-2 flex items-center justify-between">
 				<div className="flex items-center gap-1">
 					<Icon icon="uil:angle-right" className={`text-[#E99743] w-6 h-6 transition-all ${isOpen ? 'rotate-90' : ''}`} />
 					<span className="mt-0.5">{category.category}</span>
@@ -31,9 +33,9 @@ function Category({category, index}: {
 						}
 
 						setSelected(newSelected);
-					}} className="flex items-center gap-2 text-sm group">
-						<text className="text-white tracking-wide hidden group-hover:block">Pick all</text>
-						<img src="https://vanillatweaks.net/assets/images/pickall.png" alt="pick all" className="w-6 h-6" />
+					}} className="flex items-center gap-2 text-sm group cath">
+						<p className="text-white tracking-wide hidden group-hover:block cath">Pick all</p>
+						<img src="https://vanillatweaks.net/assets/images/pickall.png" alt="pick all" className="w-6 h-6 cath" />
 					</button>
 				)}
 			</button>
