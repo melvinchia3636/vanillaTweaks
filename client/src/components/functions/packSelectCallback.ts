@@ -4,7 +4,7 @@ import { Resourcepack } from '../pages/ResourcePacks';
 
 const packSelectCallback = (
   selected: {[key: string]: (Resourcepack | Datapack | CraftingTweak)[]},
-  setSelected: (_selected: {[key: string]: (Resourcepack | Datapack | CraftingTweak)[]}) => void,
+  setSelected: (_selected: any) => void,
   category: string,
   pack: Resourcepack | Datapack | CraftingTweak,
 ) => {

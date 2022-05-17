@@ -14,7 +14,7 @@ function PackItem({ pack, category }: { pack: Datapack, category: string }) {
   return (
     <button
       type="button"
-      onClick={() => packSelectCallback(selected, setSelected as never, category, pack)}
+      onClick={() => packSelectCallback(selected, setSelected, category, pack)}
       onMouseEnter={() => {
         setHover(pack);
         setItemHover(true);

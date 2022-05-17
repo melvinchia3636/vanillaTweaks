@@ -10,7 +10,10 @@ const download = async (
   type: string,
   version: number,
 ) => {
-  const data: any = { ...selected };
+  const data: {
+    [x: string]: (Datapack | Resourcepack | CraftingTweak | string)[];
+  } = { ...selected };
+
   for (const key in selected) {
     data[key] = selected[key].map((e) => e.name);
   }
