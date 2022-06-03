@@ -1,9 +1,9 @@
 /* eslint-disable react/jsx-no-constructed-context-values */
 import { Icon } from '@iconify/react';
 import React, { createContext, useEffect, useState } from 'react';
-import Loading from '../../misc/Loading';
-import MiscButtons from '../../misc/MiscButtons';
-import Selector from '../../misc/Selector';
+import Loading from '../../components/Loading';
+import MiscButtons from '../../components/MiscButtons';
+import Selector from '../../components/Selector';
 import Category from './Category';
 
 export interface Datapack {
@@ -62,9 +62,9 @@ function Datapacks() {
       selected, setSelected, hover, setHover, version,
     }}
     >
-      <div className="flex min-h-full gap-4 items-stretch">
-        <div className="flex-1 h-full mr-0 pb-16 flex flex-col">
-          <div className={`min-w-0 h-full m-8 mb-12 mr-0 flex-col overflow-scroll bg-[#696969] rounded-lg shadow-lg p-8 ${data.length === 0 && 'flex'}`}>
+      <div className="flex flex-1 gap-4 min-h-0">
+        <div className="flex-1 h-full mb-16 mr-0 flex flex-col">
+          <div className={`min-w-0 h-full m-8  mr-0 flex-col overflow-scroll bg-[#696969] rounded-lg shadow-lg p-8 ${data.length === 0 && 'flex'}`}>
             <div className="flex items-center justify-between">
               <h1 className="text-2xl text-white tracking-widest drop-shadow-md">Datapacks</h1>
               <div className="flex items-center text-white gap-2">
@@ -96,7 +96,7 @@ function Datapacks() {
             </div>
           </div>
         </div>
-        <div className="w-72 m-8 mb-28 gap-4 flex flex-col overflow-hidden flex-shrink-[9999] position-relative ml-0">
+        <div className="w-72 m-8  gap-4 flex flex-col overflow-hidden flex-shrink-[9999] position-relative ml-0">
           <Selector selected={selected} name="datapacks" display="Datapacks" version={version} />
           <MiscButtons />
         </div>

@@ -1,15 +1,16 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './components/pages/Home';
-import Navbar from './components/misc/Navbar';
-import HowToInstall from './components/pages/HowToInstall';
-import ResourcePack from './components/pages/ResourcePacks';
-import Datapacks from './components/pages/Datapacks';
-import CraftingTweaks from './components/pages/CraftingTweaks';
+import Home from './pages/Home';
+import Navbar from './components/Navbar';
+import HowToInstall from './pages/HowToInstall';
+import ResourcePack from './pages/ResourcePacks';
+import Datapacks from './pages/Datapacks';
+import CraftingTweaks from './pages/CraftingTweaks';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="App w-full h-full flex flex-col overflow-hidden">
+    <div className="App w-full h-screen flex flex-col">
       <Router>
         <Navbar />
         <Routes>
@@ -21,6 +22,7 @@ function App() {
           <Route path="/datapacks" element={<Datapacks />} />
           <Route path="/crafting-tweaks" element={<CraftingTweaks />} />
         </Routes>
+        <Footer />
       </Router>
     </div>
   );
