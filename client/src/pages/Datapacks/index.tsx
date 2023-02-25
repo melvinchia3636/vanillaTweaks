@@ -1,3 +1,6 @@
+/* eslint-disable func-call-spacing */
+/* eslint-disable no-spaced-func */
+/* eslint-disable indent */
 /* eslint-disable react/jsx-no-constructed-context-values */
 import { Icon } from '@iconify/react';
 import React, { createContext, useEffect, useState } from 'react';
@@ -39,21 +42,21 @@ export const Context = createContext<{
   setSelected() {},
   hover: null,
   setHover() {},
-  version: 18,
+  version: 19,
 });
 
 function Datapacks() {
   const [data, setData] = useState<IDatapacks[]>([]);
   const [selected, setSelected] = useState<{ [key: string]: Datapack[] }>({});
   const [hover, setHover] = useState<Datapack | null>(null);
-  const [version, setVersion] = useState<number>(18);
+  const [version, setVersion] = useState<number>(19);
 
   useEffect(() => {
     setData([]);
     setSelected({});
 
     fetch(
-      `https://cors-anywhere.thecodeblog.net/vanillatweaks.net/assets/resources/json/1.${version}/dpcategories.json`
+      `https://cors-anywhere.thecodeblog.net/vanillatweaks.net/assets/resources/json/1.${version}/dpcategories.json`,
     )
       .then((response) => response.json())
       .then((d) => setData(d.categories));
@@ -69,7 +72,7 @@ function Datapacks() {
         version,
       }}
     >
-      <div className="flex flex-col lg:flex-row flex-1 gap-4 min-h-0">
+      <div className="flex flex-col lg:flex-row flex-1 gap-4 min-h-0 mt-20">
         <div className="flex-1 h-full lg:mb-16 mr-0 flex flex-col">
           <div
             className={`min-w-0 h-full m-8 lg:mr-0 flex-col overflow-scroll bg-[#696969] rounded-lg shadow-lg p-8 ${
@@ -87,7 +90,7 @@ function Datapacks() {
                 >
                   <Icon icon="uil:angle-left" className="text-2xl" />
                 </button>
-                {Array(6)
+                {Array(7)
                   .fill(0)
                   .map((_, i) => (
                     <>

@@ -1,3 +1,4 @@
+/* eslint-disable func-call-spacing */
 /* eslint-disable no-spaced-func */
 /* eslint-disable indent */
 /* eslint-disable react/jsx-no-constructed-context-values */
@@ -34,23 +35,23 @@ export const Context = createContext<{
   setSelected() {},
   hover: null,
   setHover() {},
-  version: 18,
+  version: 19,
 });
 
 function CraftingTweaks() {
   const [data, setData] = useState<ICraftingTweaks[]>([]);
   const [selected, setSelected] = useState<{ [key: string]: CraftingTweak[] }>(
-    {}
+    {},
   );
   const [hover, setHover] = useState<CraftingTweak | null>(null);
-  const [version, setVersion] = useState(18);
+  const [version, setVersion] = useState(19);
 
   useEffect(() => {
     setData([]);
     setSelected({});
 
     fetch(
-      `https://cors-anywhere.thecodeblog.net/vanillatweaks.net/assets/resources/json/1.${version}/ctcategories.json`
+      `https://cors-anywhere.thecodeblog.net/vanillatweaks.net/assets/resources/json/1.${version}/ctcategories.json`,
     )
       .then((response) => response.json())
       .then((d) => setData(d.categories));
@@ -66,7 +67,7 @@ function CraftingTweaks() {
         version,
       }}
     >
-      <div className="flex flex-col lg:flex-row flex-1 gap-4 min-h-0">
+      <div className="flex flex-col lg:flex-row flex-1 gap-4 min-h-0 mt-20">
         <div className="flex-1 h-full lg:mb-16 mr-0 flex flex-col">
           <div
             className={`min-w-0 h-full flex-col m-8 lg:mr-0 overflow-scroll bg-[#696969] rounded-lg shadow-lg p-8 ${
@@ -84,7 +85,7 @@ function CraftingTweaks() {
                 >
                   <Icon icon="uil:angle-left" className="text-2xl" />
                 </button>
-                {Array(6)
+                {Array(7)
                   .fill(0)
                   .map((_, i) => (
                     <>

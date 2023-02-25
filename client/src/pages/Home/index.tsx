@@ -2,7 +2,7 @@ import React from 'react';
 
 function Home() {
   return (
-    <div className="w-full h-full items-center justify-center flex flex-col gap-8">
+    <div className="w-full h-full items-center justify-center flex flex-col gap-8 mt-20">
       <img
         src="https://vanillatweaks.net/assets/images/logo.png"
         alt="logo"

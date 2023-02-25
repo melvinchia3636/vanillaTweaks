@@ -1,3 +1,6 @@
+/* eslint-disable func-call-spacing */
+/* eslint-disable no-spaced-func */
+/* eslint-disable indent */
 /* eslint-disable no-shadow */
 /* eslint-disable react/jsx-no-constructed-context-values */
 import { Icon } from '@iconify/react';
@@ -42,23 +45,23 @@ export const Context = createContext<{
   setSelected: () => {},
   hover: null,
   setHover: () => {},
-  version: 18,
+  version: 19,
 });
 
 function ResourcePack() {
   const [data, setData] = useState<IResourcePacks[]>([]);
   const [selected, setSelected] = useState<{ [key: string]: Resourcepack[] }>(
-    {}
+    {},
   );
   const [hover, setHover] = useState<Resourcepack | null>(null);
-  const [version, setVersion] = useState<number>(18);
+  const [version, setVersion] = useState<number>(19);
 
   useEffect(() => {
     setData([]);
     setSelected({});
 
     fetch(
-      `https://cors-anywhere.thecodeblog.net/vanillatweaks.net/assets/resources/json/1.${version}/rpcategories.json`
+      `https://cors-anywhere.thecodeblog.net/vanillatweaks.net/assets/resources/json/1.${version}/rpcategories.json`,
     )
       .then((response) => response.json())
       .then((d) => setData(d.categories));
@@ -74,14 +77,14 @@ function ResourcePack() {
         version,
       }}
     >
-      <div className="flex flex-col lg:flex-row flex-1 gap-4 min-h-0">
+      <div className="flex flex-col lg:flex-row flex-1 gap-4 min-h-0 mt-20">
         <div className="flex-1 h-full lg:mb-16 mr-0 flex flex-col">
           <div
             className={`min-w-0 h-full flex-col m-8 lg:mr-0 overflow-scroll bg-[#696969] rounded-lg shadow-lg p-8 ${
               data.length === 0 && 'flex'
             }`}
           >
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between mb-8">
               <h1 className="text-2xl text-white tracking-widest drop-shadow-md">
                 Resource Packs
               </h1>
@@ -92,7 +95,7 @@ function ResourcePack() {
                 >
                   <Icon icon="uil:angle-left" className="text-2xl" />
                 </button>
-                {Array(8)
+                {Array(9)
                   .fill(0)
                   .map((_, i) => (
                     <>
@@ -117,7 +120,16 @@ function ResourcePack() {
                 </button>
               </div>
             </div>
-            <div className="min-w-0 flex-1 overflow-auto flex flex-col gap-2 mt-8">
+            {version === 19 && (
+              <div className="w-full p-6 bg-[#E94D43] mb-4 rounded-md text-white">
+                If you are using 1.19, 1.19.1, or 1.19.2, you can safely ignore
+                the &quot;made for a newer version of Minecraft&quot; warning
+                when applying your resource pack in-game, as it is incorrect.
+                <br />
+                (If you are using 1.19.3, you won&apos;t see this warning.)
+              </div>
+            )}
+            <div className="min-w-0 flex-1 overflow-auto flex flex-col gap-2">
               {data.length > 0 ? (
                 data.map((category, index) => (
                   <Category

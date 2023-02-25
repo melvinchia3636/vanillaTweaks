@@ -24,7 +24,7 @@ function Navbar() {
   ];
 
   return (
-    <nav className="w-full p-6 bg-neutral-700 shadow-md flex items-center justify-between">
+    <nav className="w-full p-6 bg-neutral-700 shadow-md flex items-center justify-between fixed z-[9999]">
       <Link
         to="/"
         className="flex items-center gap-3 uppercase text-white tracking-widest"
@@ -41,10 +41,8 @@ function Navbar() {
           <Link
             key={name}
             to={link}
-            className={`relative ${
-              link === location.pathname
-                ? "after:content-[''] after:absolute after:w-1/2 after:border-b-2 after:border-b-[#E99743] after:-bottom-0.5 after:left-1/2 after:-translate-x-1/2 after:rounded-full"
-                : ''
+            className={`relative after:transition-all after:content-[''] after:absolute after:border-b-2 after:border-b-[#E99743] after:-bottom-0.5 after:left-1/2 after:-translate-x-1/2 after:rounded-full ${
+              link === location.pathname ? 'after:w-1/2' : 'after:w-0'
             }`}
           >
             {name}

@@ -40,6 +40,7 @@
     "vite": "^2.8.0"
   },
   "prettier": {
-    "singleQuote": true
+    "singleQuote": true,
+    "trailingComma": "all"
   }
 }

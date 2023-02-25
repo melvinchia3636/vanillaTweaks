@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-one-expression-per-line */
 /* eslint-disable no-negated-condition */
 import React from 'react';
 import { Icon } from '@iconify/react';

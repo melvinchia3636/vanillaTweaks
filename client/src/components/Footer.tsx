@@ -7,14 +7,26 @@ function Footer() {
       <p className="flex items-center gap-2">
         Copyright © Vanilla Tweaks 2021
         <span className="w-1 h-1 bg-[#E99743] inline-block rounded-full" />
-        Privacy Policy
+        <a className="underline decoration-[1.5px]">Terms & Conditions</a>
+        <span className="w-1 h-1 bg-[#E99743] inline-block rounded-full" />
+        <a className="underline decoration-[1.5px]">Privacy Policy</a>
       </p>
       <p className="flex items-center gap-2">
-        Follow us on
-        <Icon icon="simple-icons:twitter" />
-        <Icon icon="simple-icons:discord" />
+        Join and support us on
+        <a
+          href="https://twitter.com/VanillaTweaks"
+          className="hover:text-[#E99743] transition-all"
+        >
+          <Icon icon="simple-icons:twitter" />
+        </a>
+        <a
+          href="https://discord.com/invite/qG53qwF"
+          className="hover:text-[#E99743] transition-all"
+        >
+          <Icon icon="simple-icons:discord" />
+        </a>
         <span className="w-1 h-1 bg-[#E99743] inline-block rounded-full" />
-        Send us feedback
+        <a className="underline decoration-[1.5px]">Send us feedback</a>
       </p>
     </div>
   );
