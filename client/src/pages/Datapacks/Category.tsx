@@ -18,13 +18,12 @@ function Category({
       <button
         type="button"
         onClick={(e) => {
-          // TODO: This needs to be fixed
-          if ((e.target as HTMLButtonElement)?.classList.contains('cath')) {
+          if (!(e.target as HTMLButtonElement)?.classList.contains('cath')) {
             setOpen(!isOpen);
           }
         }}
         className="text-
-      lg cath text-white tracking-widest bg-[#525252] rounded-md shadow-md px-4 py-2 flex items-center justify-between"
+      lg text-white tracking-widest bg-[#525252] rounded-md shadow-md px-4 py-2 flex items-center justify-between"
       >
         <div className="flex items-center gap-1">
           <Icon
@@ -48,15 +47,15 @@ function Category({
 
               setSelected(newSelected);
             }}
-            className="flex items-center gap-2 text-sm group"
+            className="flex items-center gap-2 text-sm group cath"
           >
-            <text className="text-white tracking-wide hidden group-hover:block">
+            <p className="text-white tracking-wide hidden group-hover:block cath">
               Pick all
-            </text>
+            </p>
             <img
               src="https://vanillatweaks.net/assets/images/pickall.png"
               alt="pick all"
-              className="w-6 h-6"
+              className="w-6 h-6 cath"
             />
           </button>
         )}
