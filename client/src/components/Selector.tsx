@@ -3,7 +3,7 @@
 import React from 'react';
 import { Icon } from '@iconify/react';
 import download from '../functions/download';
-import { Datapack } from '../pages/Datapacks';
+import { Datapack } from '../pages/Datapacks/components';
 import { Resourcepack } from '../pages/ResourcePacks';
 import { CraftingTweak } from '../pages/CraftingTweaks';
 import isIncompatible from '../functions/isIncompatible';

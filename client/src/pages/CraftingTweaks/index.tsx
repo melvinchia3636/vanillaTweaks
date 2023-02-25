@@ -7,7 +7,7 @@ import React, { createContext, useEffect, useState } from 'react';
 import Loading from '../../components/Loading';
 import MiscButtons from '../../components/MiscButtons';
 import Selector from '../../components/Selector';
-import Category from './Category';
+import Category from './components/Category';
 
 export interface CraftingTweak {
   name: string;

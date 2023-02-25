@@ -1,5 +1,5 @@
 import { CraftingTweak } from '../pages/CraftingTweaks';
-import { Datapack } from '../pages/Datapacks';
+import { Datapack } from '../pages/Datapacks/components';
 import { Resourcepack } from '../pages/ResourcePacks';
 
 function isIncompatible(

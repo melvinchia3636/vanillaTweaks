@@ -15,15 +15,27 @@ function Footer() {
         Join and support us on
         <a
           href="https://twitter.com/VanillaTweaks"
+          target="_blank"
+          rel="noreferrer"
           className="hover:text-[#E99743] transition-all"
         >
           <Icon icon="simple-icons:twitter" />
         </a>
         <a
           href="https://discord.com/invite/qG53qwF"
+          target="_blank"
+          rel="noreferrer"
           className="hover:text-[#E99743] transition-all"
         >
           <Icon icon="simple-icons:discord" />
+        </a>
+        <a
+          href="https://www.patreon.com/vanillatweaks"
+          target="_blank"
+          rel="noreferrer"
+          className="hover:text-[#E99743] transition-all"
+        >
+          <Icon icon="simple-icons:patreon" />
         </a>
         <span className="w-1 h-1 bg-[#E99743] inline-block rounded-full" />
         <a className="underline decoration-[1.5px]">Send us feedback</a>

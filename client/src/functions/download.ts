@@ -2,7 +2,7 @@
 /* eslint-disable guard-for-in */
 import axios from 'axios';
 import { CraftingTweak } from '../pages/CraftingTweaks';
-import { Datapack } from '../pages/Datapacks';
+import { Datapack } from '../pages/Datapacks/components';
 import { Resourcepack } from '../pages/ResourcePacks';
 
 const download = async (

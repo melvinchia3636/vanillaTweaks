@@ -6,7 +6,7 @@
 import { Icon } from '@iconify/react';
 import React, { createContext, useEffect, useState } from 'react';
 import MiscButtons from '../../components/MiscButtons';
-import Category from './Category';
+import Category from './components/Category';
 import Selector from '../../components/Selector';
 import Loading from '../../components/Loading';
 

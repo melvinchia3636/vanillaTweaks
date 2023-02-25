@@ -1,13 +1,13 @@
 import { Icon } from '@iconify/react';
 import React, { useContext, useState } from 'react';
-import { Context, ICraftingTweaks } from '.';
+import { Context, IResourcePacks } from '..';
 import PackItem from './Pack';
 
 function Category({
   category,
   index,
 }: {
-  category: ICraftingTweaks;
+  category: IResourcePacks;
   index: number;
 }) {
   const [isOpen, setOpen] = useState(index === 0);
