@@ -8,13 +8,17 @@ import Datapacks from './pages/Datapacks/components';
 import CraftingTweaks from './pages/CraftingTweaks';
 import Footer from './components/Footer';
 import About from './pages/About';
+import TermsAndConditions from './pages/TermsAndConditions';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 
 function App() {
   const location = useLocation();
   return (
     <div
       className={`App w-full ${
-        ['/installation', '/about'].includes(location.pathname)
+        ['/installation', '/about', '/toc', '/privacy'].includes(
+          location.pathname,
+        )
           ? 'lg:min-h-screen'
           : 'lg:h-screen'
       } flex flex-col relative`}
@@ -24,6 +28,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/installation" element={<HowToInstall />} />
+        <Route path="/toc" element={<TermsAndConditions />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
 
         <Route path="/resource-packs" element={<ResourcePack />} />
         <Route path="/datapacks" element={<Datapacks />} />

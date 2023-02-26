@@ -1,5 +1,6 @@
 import React from 'react';
 import { Icon } from '@iconify/react';
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
@@ -7,9 +8,13 @@ function Footer() {
       <p className="flex items-center gap-2">
         Copyright © Vanilla Tweaks 2021
         <span className="w-1 h-1 bg-[#E99743] inline-block rounded-full" />
-        <a className="underline decoration-[1.5px]">Terms & Conditions</a>
+        <Link to="/toc" className="underline decoration-[1.5px]">
+          Terms & Conditions
+        </Link>
         <span className="w-1 h-1 bg-[#E99743] inline-block rounded-full" />
-        <a className="underline decoration-[1.5px]">Privacy Policy</a>
+        <Link to="/privacy" className="underline decoration-[1.5px]">
+          Privacy Policy
+        </Link>
       </p>
       <p className="flex items-center gap-2">
         Join and support us on

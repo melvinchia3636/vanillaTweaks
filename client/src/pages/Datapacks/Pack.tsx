@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-one-expression-per-line */
 /* eslint-disable react/no-danger */
 /* eslint-disable no-nested-ternary */
 import React, { useContext, useState } from 'react';
