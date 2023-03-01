@@ -15,14 +15,17 @@ function Home() {
       <div className="flex items-start justify-between px-24 mt-8 divide-x-2 divide-neutral-500">
         <Section
           title="Datapacks"
+          to="/datapacks"
           description="Starting from Minecraft version 1.13. They can run commands in-game, control loot tables, change crafting recipes and alter achievements."
         />
         <Section
           title="Crafting Tweaks"
+          to="/crafting-tweaks"
           description="Starting from Minecraft version 1.13. Crafting Tweaks are a separate category of datapacks. They can change or add crafting recipes and add functionality."
         />
         <Section
           title="Resource Packs"
+          to="/resource-packs"
           description="Starting from Minecraft version 1.11. Resource packs can alter textures, sounds and models. For example change your crosshair or select a new menu background."
         />
       </div>

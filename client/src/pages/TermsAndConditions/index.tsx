@@ -1,21 +1,14 @@
 import React from 'react';
-import Banner from '../../../public/assets/images/banner/banner.png';
+import DeclarationHeader from '../../components/DeclarationHeader';
 
 function TermsAndConditions() {
   return (
     <div className="w-full mt-20 pb-20 text-white flex flex-col items-center">
-      <div
-        className="w-full h-72 bg-black/20 bg-center bg-blend-darken text-white text-5xl font-semibold flex items-end justify-center py-4"
-        style={{
-          backgroundImage: `url("${Banner}")`,
-        }}
-      >
-        Terms and Conditions
-      </div>
+      <DeclarationHeader title="Terms and Conditions" />
       <div className="py-16 w-3/4">
-        <h2 className="text-3xl">
+        <h1 className="text-3xl">
           Regarding using Vanilla Tweaks in your own projects
-        </h2>
+        </h1>
         <p className="mt-4 leading-8">
           It is perfectly fine for anyone to use, modify and share our packs
           within their projects for the betterment of the community.
@@ -26,9 +19,9 @@ function TermsAndConditions() {
         <p className="mt-8 text-sm font-semibold tracking-wider text-[#E99743]">
           SECTION 1
         </p>
-        <h3 className="text-3xl mt-2 uppercase tracking-widest font-semibold">
+        <h2 className="text-3xl mt-2 uppercase tracking-widest font-semibold">
           Terms
-        </h3>
+        </h2>
         <p className="font-semibold mt-4 text-lg mb-2">You cannot:</p>
         <ul className="list-disc list-inside pl-4 leading-8">
           <li>
@@ -61,9 +54,9 @@ function TermsAndConditions() {
         <p className="mt-8 text-sm font-semibold tracking-wider text-[#E99743]">
           SECTION 2
         </p>
-        <h3 className="text-3xl mt-2 uppercase tracking-widest font-semibold">
+        <h2 className="text-3xl mt-2 uppercase tracking-widest font-semibold">
           Credits
-        </h3>
+        </h2>
         <p className="mt-4 leading-8">
           Include the below text on all main publishing platforms that you may
           use. (Minecraft Forum, Planet Minecraft, Minecraft Maps, Curseforge,
