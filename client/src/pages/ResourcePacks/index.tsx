@@ -121,7 +121,7 @@ function ResourcePack() {
               </div>
             </div>
             {version === 19 && (
-              <div className="w-full p-6 bg-[#E94D43] mb-4 rounded-md text-white">
+              <div className="w-full p-6 bg-[#E94D43] mb-4 rounded-md text-white shadow-md">
                 If you are using 1.19, 1.19.1, or 1.19.2, you can safely ignore
                 the &quot;made for a newer version of Minecraft&quot; warning
                 when applying your resource pack in-game, as it is incorrect.

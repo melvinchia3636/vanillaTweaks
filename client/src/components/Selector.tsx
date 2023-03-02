@@ -69,7 +69,7 @@ function Selector({
       <button
         type="button"
         onClick={() => download(selected, name, version)}
-        className="bg-[#E99743] text-white w-full py-3"
+        className="bg-[#E99743] hover:bg-[#dd8a38] transition-all text-white w-full py-3"
       >
         Download
       </button>

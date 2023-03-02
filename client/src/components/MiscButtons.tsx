@@ -8,7 +8,7 @@ function MiscButtons() {
         href="/installation"
         target="_blank"
         rel="noreferrer"
-        className="w-full flex items-center justify-center bg-[#E99743] text-white rounded-md py-3 shadow-md"
+        className="w-full flex items-center justify-center bg-[#E99743] hover:bg-[#dd8a38] transition-all text-white rounded-md py-3 shadow-md"
       >
         How to Install
       </a>
@@ -16,7 +16,7 @@ function MiscButtons() {
         href="https://patreon.com/vanillatweaks"
         target="_blank"
         rel="noreferrer"
-        className="w-full flex bg-[#E94D43] items-center justify-center text-white rounded-md py-3 relative shadow-md"
+        className="w-full flex bg-[#E94D43] hover:bg-[#d54137] transition-all items-center justify-center text-white rounded-md py-3 relative shadow-md"
       >
         <Icon
           icon="mdi:patreon"

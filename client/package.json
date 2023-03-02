@@ -8,6 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.12",
     "@iconify/react": "^3.1.4",
     "@types/react-lottie": "^1.2.6",
     "autoprefixer": "^10.4.2",

@@ -10,13 +10,14 @@ import Footer from './components/Footer';
 import About from './pages/About';
 import TermsAndConditions from './pages/TermsAndConditions';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import Feedback from './pages/Feedback';
 
 function App() {
   const location = useLocation();
   return (
     <div
       className={`App w-full ${
-        ['/installation', '/about', '/toc', '/privacy'].includes(
+        ['/installation', '/about', '/toc', '/privacy', '/feedback'].includes(
           location.pathname,
         )
           ? 'lg:min-h-screen'
@@ -27,6 +28,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/feedback" element={<Feedback />} />
         <Route path="/installation" element={<HowToInstall />} />
         <Route path="/toc" element={<TermsAndConditions />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />
