@@ -2,12 +2,13 @@
 /* eslint-disable no-spaced-func */
 /* eslint-disable indent */
 /* eslint-disable react/jsx-no-constructed-context-values */
-import { Icon } from '@iconify/react';
-import React, { createContext, useEffect, useState } from 'react';
-import Loading from '../../components/Loading';
-import MiscButtons from '../../components/MiscButtons';
-import Selector from '../../components/Selector';
-import Category from './components/Category';
+import { Icon } from "@iconify/react";
+import React, { createContext, useEffect, useState } from "react";
+import Loading from "../../components/Loading";
+import MiscButtons from "../../components/MiscButtons";
+import Selector from "../../components/Selector";
+import VersionSelector from "../../components/versionSelector";
+import Category from "./components/Category";
 
 export interface CraftingTweak {
   name: string;
@@ -41,7 +42,7 @@ export const Context = createContext<{
 function CraftingTweaks() {
   const [data, setData] = useState<ICraftingTweaks[]>([]);
   const [selected, setSelected] = useState<{ [key: string]: CraftingTweak[] }>(
-    {},
+    {}
   );
   const [hover, setHover] = useState<CraftingTweak | null>(null);
   const [version, setVersion] = useState(19);
@@ -51,7 +52,7 @@ function CraftingTweaks() {
     setSelected({});
 
     fetch(
-      `https://cors-anywhere.thecodeblog.net/vanillatweaks.net/assets/resources/json/1.${version}/ctcategories.json`,
+      `https://cors-anywhere.thecodeblog.net/vanillatweaks.net/assets/resources/json/1.${version}/ctcategories.json`
     )
       .then((response) => response.json())
       .then((d) => setData(d.categories));
@@ -71,44 +72,19 @@ function CraftingTweaks() {
         <div className="flex-1 h-full lg:mb-16 mr-0 flex flex-col">
           <div
             className={`min-w-0 h-full flex-col m-8 lg:mr-0 overflow-scroll bg-[#696969] rounded-lg shadow-lg p-8 ${
-              data.length === 0 && 'flex'
+              data.length === 0 && "flex"
             }`}
           >
             <div className="flex items-center justify-between">
               <h1 className="text-2xl text-white tracking-widest drop-shadow-md">
                 Crafting Tweaks
               </h1>
-              <div className="flex items-center text-white gap-2">
-                <button
-                  type="button"
-                  onClick={() => version > 13 && setVersion(version - 1)}
-                >
-                  <Icon icon="uil:angle-left" className="text-2xl" />
-                </button>
-                {Array(7)
-                  .fill(0)
-                  .map((_, i) => (
-                    <>
-                      {i > 0 && <span className="text-lg font-medium">/</span>}
-                      <button
-                        type="button"
-                        onClick={() => setVersion(i + 13)}
-                        className={`text-lg tracking-wider after:absolute after:border-b-2 after:border-b-[#E99743] after:-bottom-0.5 after:shadow-md after:left-1/2 after:-translate-x-1/2 after:transition-all relative drop-shadow-md transition-all after:rounded-md after:w-0 ${
-                          version === i + 13 && 'after:!w-1/2 !text-[1.6rem]'
-                        }`}
-                      >
-                        1.
-                        {i + 13}
-                      </button>
-                    </>
-                  ))}
-                <button
-                  type="button"
-                  onClick={() => version < 18 && setVersion(version + 1)}
-                >
-                  <Icon icon="uil:angle-right" className="text-2xl" />
-                </button>
-              </div>
+              <VersionSelector
+                version={version}
+                setVersion={setVersion}
+                versionCount={7}
+                versionStart={13}
+              />
             </div>
             <div className="min-w-0 flex-1 overflow-auto flex flex-col gap-2 mt-8">
               {data.length > 0 ? (

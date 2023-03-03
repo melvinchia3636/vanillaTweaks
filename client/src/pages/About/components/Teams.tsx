@@ -72,8 +72,10 @@ const TEAMS: {
 function Teams() {
   return (
     <>
-      <h2 className="font-semibold tracking-widest text-4xl mt-20">OUR TEAM</h2>
-      <div className="w-3/4 grid grid-cols-4 gap-4 mt-8">
+      <h2 className="font-semibold tracking-widest text-3xl sm:text-4xl mt-20">
+        OUR TEAM
+      </h2>
+      <div className="w-3/4 grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-4 mt-8">
         {TEAMS.map(({ name, role, image, links }) => (
           <Card
             key={name}

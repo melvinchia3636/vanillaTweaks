@@ -1,9 +1,9 @@
-import React from 'react';
-import DeclarationHeader from '../../components/DeclarationHeader';
+import React from "react";
+import DeclarationHeader from "../../components/DeclarationHeader";
 
 function TermsAndConditions() {
   return (
-    <div className="w-full mt-20 pb-20 text-white flex flex-col items-center">
+    <div className="w-full mt-20 sm:pb-20 text-white flex flex-col items-center">
       <DeclarationHeader title="Terms and Conditions" />
       <div className="py-16 w-3/4">
         <h1 className="text-3xl">
@@ -66,7 +66,7 @@ function TermsAndConditions() {
           below text.
         </p>
         <div className="p-4 w-full bg-[#696969] rounded-lg mt-4 shadow-lg">
-          <pre className="text-base">
+          <pre className="text-base whitespace-pre-wrap">
             Credits:
             <br />
             Vanilla Tweaks: https://vanillatweaks.net/

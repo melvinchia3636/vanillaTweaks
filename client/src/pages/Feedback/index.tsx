@@ -3,28 +3,28 @@
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable implicit-arrow-linebreak */
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import { Listbox, Transition } from '@headlessui/react';
-import { Icon } from '@iconify/react';
-import React, { Fragment, useState } from 'react';
-import DeclarationHeader from '../../components/DeclarationHeader';
+import { Listbox, Transition } from "@headlessui/react";
+import { Icon } from "@iconify/react";
+import React, { Fragment, useState } from "react";
+import DeclarationHeader from "../../components/DeclarationHeader";
 
 const VERSION = [
-  '1.11',
-  '1.12',
-  '1.13',
-  '1.14',
-  '1.15',
-  '1.16',
-  '1.17',
-  '1.18',
-  '1.19',
+  "1.11",
+  "1.12",
+  "1.13",
+  "1.14",
+  "1.15",
+  "1.16",
+  "1.17",
+  "1.18",
+  "1.19",
 ];
 
 function Feedback() {
   const [selected, setSelected] = useState(VERSION[VERSION.length - 1]);
 
   return (
-    <div className="w-full mt-20 pb-20 text-white flex flex-col items-center">
+    <div className="w-full mt-20 sm:pb-20 text-white flex flex-col items-center">
       <DeclarationHeader title="Feedback" />
       <div className="w-[calc(75%+3rem)] mt-16 p-6 bg-[#E99743] mb-4 rounded-md text-white shadow-md">
         For questions about datapacks/resource packs, or to get help on how to
@@ -76,8 +76,8 @@ function Feedback() {
             <label htmlFor="type" className="mt-4 font-semibold">
               Type
             </label>
-            <div className="flex gap-6">
-              {['Suggestions', 'Issues', 'Other'].map((_type, index) => (
+            <div className="flex gap-y-2 gap-x-6 flex-wrap">
+              {["Suggestions", "Issues", "Other"].map((_type, index) => (
                 <div className="inline-flex items-center">
                   <label
                     className="relative flex cursor-pointer items-center rounded-full p-3"
@@ -114,12 +114,12 @@ function Feedback() {
             <label htmlFor="subject" className="mt-4 font-semibold">
               Subject
             </label>
-            <div className="flex gap-6">
+            <div className="flex gap-y-2 gap-x-6 flex-wrap">
               {[
-                'Resource Packs',
-                'Datapacks',
-                'Crafting Tweaks',
-                'Website / Discord',
+                "Resource Packs",
+                "Datapacks",
+                "Crafting Tweaks",
+                "Website / Discord",
               ].map((_subject, index) => (
                 <div className="inline-flex items-center">
                   <label
@@ -182,8 +182,8 @@ function Feedback() {
                         className={({ active }) =>
                           `relative cursor-default select-none py-4 pl-10 pr-4 ${
                             active
-                              ? 'bg-neutral-600 text-neutral-400'
-                              : 'text-neutral-400'
+                              ? "bg-neutral-600 text-neutral-400"
+                              : "text-neutral-400"
                           }`
                         }
                         value={person}
@@ -193,8 +193,8 @@ function Feedback() {
                             <span
                               className={`block truncate ${
                                 selected
-                                  ? 'font-semibold text-white'
-                                  : 'font-normal'
+                                  ? "font-semibold text-white"
+                                  : "font-normal"
                               }`}
                             >
                               {person}

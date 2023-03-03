@@ -1,7 +1,7 @@
-import { Icon } from '@iconify/react';
-import React, { useContext, useState } from 'react';
-import { Context, ICraftingTweaks } from '..';
-import PackItem from './Pack';
+import { Icon } from "@iconify/react";
+import React, { useContext, useState } from "react";
+import { Context, ICraftingTweaks } from "..";
+import PackItem from "./Pack";
 
 function Category({
   category,
@@ -18,7 +18,7 @@ function Category({
       <button
         type="button"
         onClick={(e) => {
-          if (!(e.target as HTMLButtonElement)?.classList.contains('cath')) {
+          if (!(e.target as HTMLButtonElement)?.classList.contains("cath")) {
             setOpen(!isOpen);
           }
         }}
@@ -28,7 +28,7 @@ function Category({
           <Icon
             icon="uil:angle-right"
             className={`text-[#E99743] w-6 h-6 transition-all ${
-              isOpen ? 'rotate-90' : ''
+              isOpen ? "rotate-90" : ""
             }`}
           />
           <span className="mt-0.5">{category.category}</span>
@@ -60,8 +60,8 @@ function Category({
         )}
       </button>
       <div
-        className={`grid min-w-0 gap-4 px-8 grid-cols-[repeat(auto-fill,minmax(140px,1fr))] transition-all overflow-hidden duration-700 ${
-          isOpen ? 'max-h-[180rem] py-4' : 'max-h-0 py-0'
+        className={`grid min-w-0 gap-4 px-0 sm:px-8 grid-cols-[repeat(auto-fill,minmax(140px,1fr))] transition-all overflow-hidden duration-700 ${
+          isOpen ? "max-h-[180rem] py-4" : "max-h-0 py-0"
         }`}
       >
         {category.packs.map((pack) => (

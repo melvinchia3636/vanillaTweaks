@@ -3,15 +3,16 @@
 /* eslint-disable indent */
 /* eslint-disable no-shadow */
 /* eslint-disable react/jsx-no-constructed-context-values */
-import { Icon } from '@iconify/react';
-import React, { createContext, useEffect, useState } from 'react';
-import MiscButtons from '../../components/MiscButtons';
-import Category from './components/Category';
-import Selector from '../../components/Selector';
-import Loading from '../../components/Loading';
+import { Icon } from "@iconify/react";
+import React, { createContext, useEffect, useState } from "react";
+import MiscButtons from "../../components/MiscButtons";
+import Category from "./components/Category";
+import Selector from "../../components/Selector";
+import Loading from "../../components/Loading";
+import VersionSelector from "../../components/versionSelector";
 
 export enum PreviewExtension {
-  'gif',
+  "gif",
 }
 
 export interface Resourcepack {
@@ -51,7 +52,7 @@ export const Context = createContext<{
 function ResourcePack() {
   const [data, setData] = useState<IResourcePacks[]>([]);
   const [selected, setSelected] = useState<{ [key: string]: Resourcepack[] }>(
-    {},
+    {}
   );
   const [hover, setHover] = useState<Resourcepack | null>(null);
   const [version, setVersion] = useState<number>(19);
@@ -61,7 +62,7 @@ function ResourcePack() {
     setSelected({});
 
     fetch(
-      `https://cors-anywhere.thecodeblog.net/vanillatweaks.net/assets/resources/json/1.${version}/rpcategories.json`,
+      `https://cors-anywhere.thecodeblog.net/vanillatweaks.net/assets/resources/json/1.${version}/rpcategories.json`
     )
       .then((response) => response.json())
       .then((d) => setData(d.categories));
@@ -81,44 +82,19 @@ function ResourcePack() {
         <div className="flex-1 h-full lg:mb-16 mr-0 flex flex-col">
           <div
             className={`min-w-0 h-full flex-col m-8 lg:mr-0 overflow-scroll bg-[#696969] rounded-lg shadow-lg p-8 ${
-              data.length === 0 && 'flex'
+              data.length === 0 && "flex"
             }`}
           >
             <div className="flex items-center justify-between mb-8">
               <h1 className="text-2xl text-white tracking-widest drop-shadow-md">
                 Resource Packs
               </h1>
-              <div className="flex items-center text-white gap-2">
-                <button
-                  type="button"
-                  onClick={() => version > 11 && setVersion(version - 1)}
-                >
-                  <Icon icon="uil:angle-left" className="text-2xl" />
-                </button>
-                {Array(9)
-                  .fill(0)
-                  .map((_, i) => (
-                    <>
-                      {i > 0 && <span className="text-lg font-medium">/</span>}
-                      <button
-                        type="button"
-                        onClick={() => setVersion(i + 11)}
-                        className={`text-lg tracking-wider after:absolute after:border-b-2 after:border-b-[#E99743] after:-bottom-0.5 after:shadow-md after:left-1/2 after:-translate-x-1/2 after:transition-all relative drop-shadow-md transition-all after:rounded-md after:w-0 ${
-                          version === i + 11 && 'after:!w-1/2 !text-[1.6rem]'
-                        }`}
-                      >
-                        1.
-                        {i + 11}
-                      </button>
-                    </>
-                  ))}
-                <button
-                  type="button"
-                  onClick={() => version < 18 && setVersion(version + 1)}
-                >
-                  <Icon icon="uil:angle-right" className="text-2xl" />
-                </button>
-              </div>
+              <VersionSelector
+                version={version}
+                setVersion={setVersion}
+                versionCount={9}
+                versionStart={11}
+              />
             </div>
             {version === 19 && (
               <div className="w-full p-6 bg-[#E94D43] mb-4 rounded-md text-white shadow-md">
@@ -172,7 +148,7 @@ function ResourcePack() {
                 alt=""
                 src={`https://vanillatweaks.net/assets/resources/previews/resourcepacks/1.${version}/${
                   hover.name
-                }.${hover.previewExtension || 'png'}?v2`}
+                }.${hover.previewExtension || "png"}?v2`}
                 className="w-full aspect-video object-contain"
               />
             )}

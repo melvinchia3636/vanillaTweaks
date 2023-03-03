@@ -1,9 +1,9 @@
-import React from 'react';
-import DeclarationHeader from '../../components/DeclarationHeader';
+import React from "react";
+import DeclarationHeader from "../../components/DeclarationHeader";
 
 function PrivacyPolicy() {
   return (
-    <div className="w-full mt-20 pb-20 text-white flex flex-col items-center">
+    <div className="w-full mt-20 sm:pb-20 text-white flex flex-col items-center">
       <DeclarationHeader title="Privacy Policy" />
       <div className="py-16 w-3/4">
         <h1 className="text-4xl">Privacy Policy for Vanilla Tweaks</h1>
@@ -107,7 +107,7 @@ function PrivacyPolicy() {
             href="https://policies.google.com/technologies/ads"
             target="_blank"
             rel="noreferrer"
-            className="font-semibold underline decoration-[1.5px] text-[#E99743]"
+            className="font-semibold underline decoration-[1.5px] text-[#E99743] break-all"
           >
             https://policies.google.com/technologies/ads
           </a>
@@ -129,7 +129,7 @@ function PrivacyPolicy() {
                 href="https://policies.google.com/technologies/ads"
                 target="_blank"
                 rel="noreferrer"
-                className="font-semibold underline decoration-[1.5px] text-[#E99743]"
+                className="font-semibold underline decoration-[1.5px] text-[#E99743] break-all"
               >
                 https://policies.google.com/technologies/ads
               </a>
