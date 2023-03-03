@@ -1,7 +1,7 @@
 import { Icon } from '@iconify/react';
 import React, { useContext, useState } from 'react';
-import { Context, IDatapacks } from '.';
-import PackItem from '../Pack';
+import { Context, IDatapacks } from '..';
+import PackItem from './Pack';
 
 function Category({
   category,

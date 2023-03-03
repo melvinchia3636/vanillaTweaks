@@ -2,9 +2,9 @@
 /* eslint-disable react/no-danger */
 /* eslint-disable no-nested-ternary */
 import React, { useContext, useState } from 'react';
-import { Context, Datapack } from './components';
-import isIncompatible from '../../functions/isIncompatible';
-import packSelectCallback from '../../functions/packSelectCallback';
+import { Context, Datapack } from '..';
+import isIncompatible from '../../../functions/isIncompatible';
+import packSelectCallback from '../../../functions/packSelectCallback';
 
 function PackItem({ pack, category }: { pack: Datapack; category: string }) {
   const { selected, setSelected, hover, setHover, version } =

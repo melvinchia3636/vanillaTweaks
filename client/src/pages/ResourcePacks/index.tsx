@@ -104,7 +104,7 @@ function ResourcePack() {
                         type="button"
                         onClick={() => setVersion(i + 11)}
                         className={`text-lg tracking-wider after:absolute after:border-b-2 after:border-b-[#E99743] after:-bottom-0.5 after:shadow-md after:left-1/2 after:-translate-x-1/2 after:transition-all relative drop-shadow-md transition-all after:rounded-md after:w-0 ${
-                          version === i + 11 && 'after:!w-1/2 text-[1.6rem]'
+                          version === i + 11 && 'after:!w-1/2 !text-[1.6rem]'
                         }`}
                       >
                         1.

@@ -4,7 +4,7 @@ import Home from './pages/Home';
 import Navbar from './components/Navbar';
 import HowToInstall from './pages/HowToInstall';
 import ResourcePack from './pages/ResourcePacks';
-import Datapacks from './pages/Datapacks/components';
+import Datapacks from './pages/Datapacks';
 import CraftingTweaks from './pages/CraftingTweaks';
 import Footer from './components/Footer';
 import About from './pages/About';
