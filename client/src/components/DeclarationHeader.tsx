@@ -1,5 +1,5 @@
-import React from 'react';
-import Banner from '../../public/assets/images/banner/banner.png';
+import React from "react";
+import Banner from "../assets/images/banner/banner.png";
 
 function DeclarationHeader({ title }: { title: string }) {
   return (

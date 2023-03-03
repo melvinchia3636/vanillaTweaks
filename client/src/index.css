@@ -2,10 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Proxima Nova";
+  font-style: normal;
+  src: url("./assets/fonts/proxima-nova.otf") format("opentype");
+}
+
 * {
-  font-family: 'Proxima Nova', sans-serif;
+  font-family: "Proxima Nova", sans-serif;
   box-sizing: border-box;
-  @apply scroll-m-8 scroll-smooth
+  @apply scroll-m-8 scroll-smooth;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .installation img {

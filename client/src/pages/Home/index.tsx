@@ -1,18 +1,18 @@
-import React from 'react';
-import Section from './components/Section';
+import React from "react";
+import Section from "./components/Section";
 
 function Home() {
   return (
-    <div className="w-full h-full items-center justify-center flex flex-col gap-8 mt-20">
+    <div className="w-full h-full items-center justify-center flex flex-col gap-8 mt-36 lg:mt-20">
       <img
         src="https://vanillatweaks.net/assets/images/logo.png"
         alt="logo"
         className="w-48 h-48"
       />
-      <h2 className="text-4xl text-white uppercase tracking-[0.2em]">
+      <h2 className="text-4xl text-white uppercase tracking-[0.2em] text-center ml-2">
         pick and choose
       </h2>
-      <div className="flex items-start justify-between px-24 mt-8 divide-x-2 divide-neutral-500">
+      <div className="flex flex-col lg:flex-row items-start justify-between px-6 sm:px-12 md:px-24 mt-8 gap-16 lg:gap-0 lg:divide-x-2 divide-neutral-500">
         <Section
           title="Datapacks"
           to="/datapacks"

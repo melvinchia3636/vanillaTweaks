@@ -1,13 +1,13 @@
 /* eslint-disable object-curly-newline */
-import React, { ReactElement } from 'react';
-import { Icon } from '@iconify/react';
+import React, { ReactElement } from "react";
+import { Icon } from "@iconify/react";
 
-import Andre from '../../../../public/assets/images/about/andre.png';
-import Stridey from '../../../../public/assets/images/about/stridey_v2.png';
-import Grant from '../../../../public/assets/images/about/grant.png';
-import Rx from '../../../../public/assets/images/about/rx.png';
-import Link from '../../../components/Link';
-import Card from './Card';
+import Andre from "../../../assets/images/about/andre.png";
+import Stridey from "../../../assets/images/about/stridey_v2.png";
+import Grant from "../../../assets/images/about/grant.png";
+import Rx from "../../../assets/images/about/rx.png";
+import Link from "../../../components/Link";
+import Card from "./Card";
 
 const TEAMS: {
   name: string;
@@ -16,8 +16,8 @@ const TEAMS: {
   links: ReactElement[];
 }[] = [
   {
-    name: 'André',
-    role: 'Web Developer',
+    name: "André",
+    role: "Web Developer",
     image: Andre,
     links: [
       <Link to="https://twitter.com/itsmeAndrePaulo">
@@ -29,8 +29,8 @@ const TEAMS: {
     ],
   },
   {
-    name: 'Stridey',
-    role: 'Web Developer',
+    name: "Stridey",
+    role: "Web Developer",
     image: Stridey,
     links: [
       <Link to="https://twitter.com/Strideyyyy">
@@ -42,8 +42,8 @@ const TEAMS: {
     ],
   },
   {
-    name: 'Grant',
-    role: 'Web Developer',
+    name: "Grant",
+    role: "Web Developer",
     image: Grant,
     links: [
       <Link to="https://twitter.com/GrantGryczan">
@@ -52,8 +52,8 @@ const TEAMS: {
     ],
   },
   {
-    name: 'Rx',
-    role: 'Web Developer',
+    name: "Rx",
+    role: "Web Developer",
     image: Rx,
     links: [
       <Link to="https://twitter.com/IAmRx97">
