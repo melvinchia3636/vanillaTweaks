@@ -9,7 +9,7 @@ import MiscButtons from "../../components/MiscButtons";
 import Category from "./components/Category";
 import Selector from "../../components/Selector";
 import Loading from "../../components/Loading";
-import VersionSelector from "../../components/versionSelector";
+import VersionSelector from "../../components/VersionSelector";
 
 export enum PreviewExtension {
   "gif",

@@ -7,7 +7,7 @@ import React, { createContext, useEffect, useState } from "react";
 import Loading from "../../components/Loading";
 import MiscButtons from "../../components/MiscButtons";
 import Selector from "../../components/Selector";
-import VersionSelector from "../../components/versionSelector";
+import VersionSelector from "../../components/VersionSelector";
 import Category from "./components/Category";
 
 export interface CraftingTweak {
