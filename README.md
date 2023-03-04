@@ -38,7 +38,7 @@ If you want to run the website on your local machine:
 
 ## 📈 Status
 
-This project is still under development, new features are being added constantly. If any bugs are found, please file an issue here, and I'll resolve it ASAP.
+This project is completed. If any bugs are found, please file an issue here, and I'll resolve it ASAP.
 
 ## 💡 Inspirations 
 
