@@ -35,7 +35,7 @@ If you want to run the website on your local machine:
 1. Clone the repository: `git clone https://github.com/melvinchia3636/vanillaTweaks`
 2. Install all required dependencies for both client and serverside using `npm install`
 4. Run `npm run dev` on client side
-5. Run `npx server.js` on server side
+5. Run `npx index.js` on server side
 
 ## 📈 Status
 
